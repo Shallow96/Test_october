@@ -33,7 +33,7 @@
             </div>
             <div class="popup-form-group display-flex flex-between">
                 <div class="remember-item display-flex align-center">
-                    <input type="checkbox" id="remember_me">
+                    <input type="checkbox" id="remember_me" data-check="off">
                     <label for="remember_me">Запомнить меня</label>
                 </div>
                 <a href="#" class="promt_password" title="Нажмите для восстановления пароля">Забыли пароль?</a>
@@ -101,9 +101,14 @@
                     <li><a href="#">Ссылка 2</a></li>
                     <li><a href="#">Ссылка 3</a></li>
                 </ul>
-                <div class="login_user d-small-none">
+                <div class="login_user decktop d-small-none">
                     <img src="images/user.png" alt="">
-                    <span>Вход</span>
+                    <span class="unconfirm">Вход</span>
+                    <span class="confirm_usernam">User_name</span>
+                    <div class="login_user_action">
+                        <a href="#">Личный кабинет</a>
+                        <nav class="logout">Выйти</nav>
+                    </div>
                 </div>
             </div>
         </div>
@@ -196,7 +201,12 @@
             </div>
             <div class="login_user">
                 <img src="images/user.png" alt="">
-                <span>Вход</span>
+                <span class="unconfirm">Вход</span>
+                <span class="confirm_usernam">User_name</span>
+                <div class="login_user_action">
+                    <a href="#">Личный кабинет</a>
+                    <nav class="logout">Выйти</nav>
+                </div>
             </div>
         </div>
         <div class="mob_menu_list">

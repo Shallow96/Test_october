@@ -320,12 +320,16 @@ label{
 }
 .social_item.fb_hov:hover{
     background: #3b5998;
-    color: white;
     border-color: transparent;
     transition: 0.1s;
 }
+.social_item:hover span{
+    color: white;
+    transition: 0.3s;
+}
 .social_item.go_hov .icon_logo{
     background: url("../images/google_icon.svg");
+    transition: 0.3s;
 }
 .social_item.go_hov:hover{
     background: #f14336;
@@ -356,8 +360,9 @@ label{
 
 }
 .top_header{
+    position: relative;
+    z-index: 5;
     background: #696969;
-
 }
 .top_head_menu{
     position: relative;
@@ -412,6 +417,7 @@ label{
     transition: 0.3s;
 }
 .login_user{
+    position: relative;
     height: 100%;
     display: flex;
     align-items: center;
@@ -421,6 +427,16 @@ label{
     background: #ff8900;
     cursor: pointer;
     transition: 0.3s;
+}
+.login_user.decktop.confirm{
+    flex-direction: column;
+}
+.login_user.decktop.confirm .confirm_usernam{
+    margin: 5px 0 0;
+    line-height: 1.2;
+    max-width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .login_user:hover{
     background: #dc7100;
@@ -433,6 +449,92 @@ label{
     color: #fff;
     text-transform: uppercase;
     margin-left: 10px;
+}
+.login_user .confirm_usernam{
+    position: relative;
+    display: none;
+}
+.login_user.confirm .confirm_usernam{
+    display: block;
+    text-transform: none;
+}
+.login_user.confirm .unconfirm{
+    display: none;
+}
+.login_user .login_user_action{
+    position: absolute;
+    right: -100px;
+    left: -100px;
+    bottom: -80px;
+    margin: auto;
+    padding: 0 10px;
+    width: 120%;
+    height: 70px;
+    background: #fff;
+    border: solid 1px #7a7a7a;
+    border-radius: 5px;
+    cursor: default;
+    font-size: 12px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 10px 0px #0000007a;
+}
+.login_user.confirm .login_user_action{
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.login_user.confirm.show_action .login_user_action{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+.login_user_action a{
+    width: 100%;
+    border-bottom: dashed 1px black;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+nav.logout {
+    background: #ff8900;
+    color: white;
+    padding: 0 10px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+nav.logout:hover{
+    background: #dc7100;
+    transition: 0.3s;
+}
+.login_user_action:before,
+.login_user_action:after{
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    border: solid 15px transparent;
+    border-bottom: solid 15px white;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.login_user_action:before{
+    z-index: 1;
+    border-bottom: solid 15px #7a7a7a;;
+}
+.login_user_action:after{
+    z-index: 2;
+    top: -29px;
 }
 .main_header{
     position: relative;
@@ -1481,4 +1583,4 @@ footer .col{
 .wezom_text p{
     font-size: 14px;
     color: #fff;
-}
+}z

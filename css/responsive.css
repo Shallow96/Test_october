@@ -387,6 +387,8 @@
         transform: rotate(-45deg);
     }
     .mob_head{
+        position: relative;
+        z-index: 1;
         background: #696969;
         width: 100%;
     }
@@ -401,6 +403,9 @@
         width: 90px;
         margin-right: 10px;
         border-radius: 10px;
+    }
+    .login_user.confirm_usernam{
+        width: 100px;
     }
     .submenu{
         max-height: 0;
